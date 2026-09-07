@@ -1,0 +1,36 @@
+{
+  "domain": "virgiperpetua.com",
+  "dnsProvider": "route53",
+  "awsProfile": "virgiperpetua-dns",
+  "dnsAccountId": "034034521269",
+  "hostedZoneId": "Z043433426DTXAX70X8VD",
+  "projects": [
+    {
+      "repo": "virgiperpetua/marketing",
+      "siteRole": "apex",
+      "hostnames": [
+        "virgiperpetua.com",
+        "www.virgiperpetua.com"
+      ],
+      "hosting": {
+        "platform": "github-pages"
+      }
+    },
+    {
+      "repo": "virgiperpetua/poc-gelato-marketing",
+      "siteRole": "project",
+      "hostnames": [],
+      "hosting": {
+        "platform": "github-pages"
+      }
+    },
+    {
+      "repo": "virgiperpetua/poc-gelato-app",
+      "siteRole": "project",
+      "hostnames": [],
+      "hosting": {
+        "platform": "github-pages"
+      }
+    }
+  ]
+}
