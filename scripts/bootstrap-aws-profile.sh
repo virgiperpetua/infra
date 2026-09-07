@@ -47,11 +47,13 @@ PY
 
 echo
 echo "Refreshing the source AWS login if needed..."
-aws login
+aws login --profile "$default_source_profile"
 
 echo
 echo "Verifying credentials for profile '$profile'..."
-aws sts get-caller-identity --profile "$profile"
+env -u AWS_ACCESS_KEY_ID -u AWS_SECRET_ACCESS_KEY \
+  -u AWS_SESSION_TOKEN -u AWS_SECURITY_TOKEN \
+  aws sts get-caller-identity --profile "$profile"
 
 echo
 echo "Profile '$profile' is ready."

@@ -41,4 +41,4 @@ For projects hosted outside GitHub Pages:
 
 - `virgiperpetua.com` -> `virgiperpetua/marketing`
 - Route 53 hosted zone ID for `virgiperpetua.com`: `Z043433426DTXAX70X8VD`
-- `poc-gelato-marketing` currently operates as a project site and should remain separate from the apex branding site unless intentionally consolidated later
+- `poc-gelato-marketing` remains separate from the apex branding site, but its dedicated subdomain is still pending assignment in the project inventory

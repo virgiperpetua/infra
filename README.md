@@ -28,7 +28,7 @@ It does **not** store live credentials, exported AWS config, or secret values.
 
 ## First run on a new computer
 
-1. Install `git`, `gh`, and AWS CLI v2.
+1. Install `git`, `gh`, and AWS CLI v2.32.0 or newer.
 2. Clone this repo.
 3. Run `./scripts/bootstrap-aws-profile.sh`.
 4. Export the desired profile, or pass it explicitly:

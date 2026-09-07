@@ -12,6 +12,8 @@ This repository assumes DNS is managed in AWS Route 53 and that this machine use
 
 ## One-time setup on a new computer
 
+Requires AWS CLI `2.32.0` or newer so `aws login` is available.
+
 Run:
 
 ```bash
@@ -22,7 +24,7 @@ The script will:
 
 1. Prompt for a profile name.
 2. Write a named AWS CLI profile that assumes the DNS role in account `034034521269`.
-3. Refresh your base AWS console login with `aws login`.
+3. Refresh your base AWS console login with `aws login --profile default`.
 4. Verify the assumed-role credentials with `aws sts get-caller-identity`.
 
 ## Manual setup
@@ -41,7 +43,7 @@ output = json
 Then refresh the base login and verify:
 
 ```bash
-aws login
+aws login --profile default
 aws sts get-caller-identity --profile virgiperpetua-dns
 ```
 
