@@ -3,6 +3,7 @@
   "dnsProvider": "route53",
   "awsProfile": "virgiperpetua-dns",
   "dnsAccountId": "034034521269",
+  "hostedZoneId": "Z043433426DTXAX70X8VD",
   "projects": [
     {
       "repo": "virgiperpetua/marketing",
