@@ -2,6 +2,7 @@
   "domain": "virgiperpetua.com",
   "dnsProvider": "route53",
   "awsProfile": "virgiperpetua-dns",
+  "dnsAccountId": "034034521269",
   "projects": [
     {
       "repo": "virgiperpetua/marketing",

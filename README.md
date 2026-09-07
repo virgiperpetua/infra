@@ -4,7 +4,7 @@ Reusable infrastructure and workstation bootstrap for managing `virgiperpetua.co
 
 This repo is the safe-to-commit source of truth for:
 
-- AWS CLI setup instructions
+- AWS CLI SSO and role setup instructions
 - Route 53 inspection and validation helpers
 - Domain routing conventions
 - GitHub project to domain mappings
@@ -24,6 +24,7 @@ It does **not** store live credentials, exported AWS config, or secret values.
 - Apex site: `virgiperpetua.com` -> `virgiperpetua/marketing`
 - Project sites: `*.virgiperpetua.com` -> one subdomain per project
 - DNS authority: AWS Route 53
+- DNS account access: cross-account role in AWS account `034034521269`
 
 ## First run on a new computer
 

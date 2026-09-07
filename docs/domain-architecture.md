@@ -5,6 +5,8 @@
 - DNS provider: AWS Route 53
 - Primary domain: `virgiperpetua.com`
 - GitHub account: `virgiperpetua`
+- DNS account: `034034521269`
+- DNS access model: cross-account role access from your own AWS login
 
 ## Routing rules
 
