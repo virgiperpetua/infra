@@ -4,7 +4,7 @@ Reusable infrastructure and workstation bootstrap for managing `virgiperpetua.co
 
 This repo is the safe-to-commit source of truth for:
 
-- AWS CLI SSO and role setup instructions
+- AWS CLI login and cross-account role setup instructions
 - Route 53 inspection and validation helpers
 - Domain routing conventions
 - GitHub project to domain mappings
