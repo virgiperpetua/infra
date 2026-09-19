@@ -13,7 +13,7 @@ It does **not** store live credentials, exported AWS config, or secret values.
 
 ## Layout
 
-- `docs/aws-setup.md` - first-run AWS CLI setup on a new computer
+- `docs/aws-setup.md` - **bookmark this**: console Switch role values + CLI login for domains
 - `docs/domain-architecture.md` - domain routing rules and conventions
 - `inventory/projects.example.json` - example project/domain inventory
 - `scripts/bootstrap-aws-profile.sh` - interactive AWS profile bootstrap helper
@@ -25,6 +25,21 @@ It does **not** store live credentials, exported AWS config, or secret values.
 - Project sites: `*.virgiperpetua.com` -> one subdomain per project
 - DNS authority: AWS Route 53
 - DNS account access: cross-account role in AWS account `034034521269`
+
+## Access cheatsheet
+
+Full details live in [`docs/aws-setup.md`](docs/aws-setup.md). Short version:
+
+| Use case | How |
+| --- | --- |
+| AWS console | Switch role → account `034034521269`, role `virgiperpetua-com-dns-access` |
+| AWS CLI / domains | Profile `virgiperpetua-dns` (bootstrap once, then `aws login --profile default`) |
+
+Switch-role link:
+
+```text
+https://signin.aws.amazon.com/switchrole?account=034034521269&roleName=virgiperpetua-com-dns-access&displayName=virgiperpetua-dns
+```
 
 ## First run on a new computer
 
@@ -40,8 +55,9 @@ export AWS_PROFILE=virgiperpetua-dns
 
 ## Creating a new project domain
 
-1. Add the project to the inventory file.
-2. Decide whether it is the apex site, a GitHub Pages site, or another hosting target.
-3. Create the matching Route 53 record.
-4. Configure the custom domain in the hosting platform.
-5. Re-run `./scripts/check-domain-state.sh` to verify the hosted zone is reachable.
+1. Ensure CLI access: `export AWS_PROFILE=virgiperpetua-dns` (refresh with `aws login --profile default` if needed).
+2. Add the project to the inventory file.
+3. Decide whether it is the apex site, a GitHub Pages site, or another hosting target.
+4. Create the matching Route 53 record.
+5. Configure the custom domain in the hosting platform.
+6. Re-run `./scripts/check-domain-state.sh` to verify the hosted zone is reachable.
